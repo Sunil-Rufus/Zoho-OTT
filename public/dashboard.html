@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Host-it</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="css/dashboard.css">
+    <link rel="stylesheet" type="text/css" href="css/iziToast.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="js/iziToast.min.js" type="text/javascript"></script>
+    <script src="js/Constants.js"></script>
+</head>
+
+<body class="custom">
+
+    <nav class="navbar navbar-expand-lg navbar-dark py-0 static-top">
+        <div class="container-fluid iii">
+            <a class="navbar-brand" href="./dashboard.html">
+                <img src="http://placehold.it/150x50?text=Logo" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto" id="adminList">
+                    <li class="nav-item ">
+                        <a class="nav-link middle" href="./dashboard.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link middle" onclick="logout()">logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <div class="container my-1 ">
+
+
+        <div class="row mt-5 px-0">
+            <div class="col-md-3 pr-md-3 px-0 filter-pc">
+                <div class="filter rounded-lg" id="filters">
+                    <h4 class="font-weight-bold w-100 border-bottom px-2 py-1">FILTER</h4>
+
+                    <div class="row p-2 w-100">
+                        <section class="mb-3 pl-3 col-6 col-md-12" id="languageFilter">
+                            <p>Language</p>
+                        </section>
+
+                        <section class="mb-3 pl-3 col-md-12" id="genreFilter">
+                            <p>genre</p>
+                        </section>
+
+                        <button type="button" class="btn btn-outline-info waves-effect btn-sm w-100 ml-4"
+                                onclick="gatherFilterElements()">apply</button>
+                    </div>
+
+                    <h4 class="font-weight-bold w-100 border-bottom px-2 py-1">SORT</h4>
+
+                    <div class="row p-2 w-100">
+                        <section class="mb-3 pl-3 col-6 col-md-12" id="sorter">
+                            <div class="custom-control custom-checkbox ml-2 pb-2">
+                                <input type="checkbox" class="custom-control-input filled-in" id="rating">
+                                <label class="custom-control-label small w-100 text-uppercase card-link-secondary px-2 py-1" for="rating">Rating
+                                </label>
+                            </div>
+                            <div class="custom-control custom-checkbox ml-2 pb-2">
+                                <input type="checkbox" class="custom-control-input filled-in" id="time">
+                                <label class="custom-control-label small w-100 text-uppercase card-link-secondary px-2 py-1" for="time">Recently added
+                                </label>
+                            </div>
+                        </section>
+                        <button type="button" class="btn btn-outline-info waves-effect btn-sm w-100 ml-4"
+                                onclick="gatherFilterElements()">apply</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="movieSection col-md-9 px-0">
+                <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="movie-tab" data-toggle="tab" href="#movie" role="tab"
+                           aria-controls="home" aria-selected="true">Movies</a>
+                    </li>
+                </ul>
+
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="movie" role="tabpanel"
+                         aria-labelledby="movie-tab">
+                        <div class="py-4" id="movieBody">
+
+                            <div class="text-center" id="movieLoader">
+                                <div class="spinner-border" role="status">
+                                    <span class="sr-only">Loading...</span>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between flex-wrap col-12" id="movieCards">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <section class="footer mt-5" id="footer">
+        <div class="container">
+            <div class="social-circle-btn p-2 m-2 d-flex justify-content-center">
+                <div class="btnn instagram">
+                    <i class="fab fa-instagram fa-xs"></i>
+                </div>
+                <div class="btnn facebook">
+                    <i class="fab fa-facebook fa-xs"></i>
+                </div>
+                <div class="btnn twitter">
+                    <i class="fab fa-twitter fa-xs"></i>
+                </div>
+                <div class="btnn whatsapp">
+                    <i class="fab fa-whatsapp fa-xs"></i>
+                </div>
+                <div class="btnn youtube fa-xs">
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+
+        </div>
+        <p class="bg-primary mb-0 py-1 w-100 text-center"> Made by Sunil Rufus</i></p>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js">
+    </script>
+    <script src="js/dashboard.js"></script>
+
+
+
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+
+    <script>
+        let role = checkUser();
+        if(role == 0)
+        {
+            window.location.assign("./index.html");
+        }
+        else
+        {
+            loadMovieJS();
+            $(".selector").flatpickr();
+        }
+    </script>
+</body>
+
+</html>

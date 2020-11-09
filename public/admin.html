@@ -1,0 +1,116 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Admin panel _ Host-it</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="css/admin.css">
+    <link rel="stylesheet" type="text/css" href="css/iziToast.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="js/iziToast.min.js" type="text/javascript"></script>
+</head>
+
+<body class="custom">
+    <nav class="navbar navbar-expand-lg navbar-dark py-0 static-top">
+        <div class="container-fluid iii" id="tot_navbar">
+            <a class="navbar-brand" href="./dashboard.html">
+                <img src="https://placehold.it/150x50?text=Logo" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" id="">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav p-2 ml-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link middle" href="./dashboard.html">Home</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link middle" href="./admin.html">Admin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link middle" onclick="logout()">logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <form onsubmit="requestMovie()" class="needs-validation">
+
+                        <h4 class="text-warning d-flex justify-content-md-center">Add movie</h4>
+                        <div class="row d-flex justify-content-md-center">
+<!--                            <div class="d-flex p-2">-->
+                                <div class="col-md-6">
+                                    <small>Movie Name</small>
+                                    <input type="text" id="requestMovieName" placeholder="Movie Name"
+                                           class="form-control bg-dark text-white my-2" required>
+
+                                    <small>Genre</small>
+                                    <input type="text" id="requestGenre" placeholder="Genre"
+                                           class="form-control bg-dark text-white my-2" required>
+
+                                    <small>Language</small>
+                                    <input type="text" id="requestLang" placeholder="Language"
+                                           class="form-control bg-dark text-white my-2" required>
+
+                                    <small>Image URL</small>
+                                    <input type="text" id="imageUrl" placeholder="url"
+                                           class="form-control bg-dark text-white my-2" required>
+
+                                    <small>Rating</small>
+                                    <input type="number" id="requestrate" placeholder="rate" min="1" max="5"
+                                           class="form-control bg-dark text-white my-2" required>
+
+                                    <div class="form-group shadow-textarea">
+                                        <label for="requestDesc"><small> Description</small></label>
+                                        <textarea class="form-control bg-dark text-white z-depth-1" id="requestDesc"
+                                                  rows="3" required></textarea>
+                                    </div>
+
+                                    <small>Select time</small>
+                                    <input type="text" id="requestMovieTime" placeholder="Pick a Time"
+                                           data-id="datetime" class="form-control bg-dark text-white my-2 w-md-50 mx-auto"
+                                           readonly="readonly" required>
+
+
+                                    <button class="btn btn-primary" type = "submit">Create Movie</button>
+                                    <button class="btn btn-success btn-sm mt-3 float-right" type="reset"> reset</button>
+
+                                </div>
+
+                            </div>
+
+    </form>
+
+
+
+                </div>
+            </div>
+
+
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js">
+    </script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <script src="./js/Constants.js"></script>
+    <script src="./js/admin.js"></script>
+
+</body>
+
+<script>
+    let role = checkUser();
+    if(role != 2)
+    {
+        window.location.assign("./dashboard.html");
+    }
+</script>
+
+</html>

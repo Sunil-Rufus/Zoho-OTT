@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Movies</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="">
+    <link rel="stylesheet" type="text/css" href="css/movie.css">
+    <link rel="stylesheet" type="text/css" href="css/iziToast.min.css">
+    <script src="js/iziToast.min.js" type="text/javascript"></script>
+    <script src="js/Constants.js"></script>
+</head>
+
+<body class="custom">
+<!--    <div id="overlay">-->
+<!--        <div class="spinner"></div>-->
+<!--        <br />-->
+<!--        Loading...-->
+<!--    </div>-->
+    <nav class="navbar navbar-expand-lg navbar-dark py-0 static-top">
+        <div class="container-fluid iii">
+            <a class="navbar-brand" href="./dashboard.html">
+                <img src="http://placehold.it/150x50?text=Logo" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link middle" href="./dashboard.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link middle" onclick="logout()">logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <div class="row bg-dark my-md-4">
+            <div class="col-md-5 p-0 progress-gradient ">
+                    <img class="movieImage" id="movieImage" src="img/loader.png" alt="">
+            </div>
+            <div class="col-md-7 d-flex flex-column ">
+<!--                <div class="row px-md-4 mt-5 mb-3">-->
+                <h1 id="movieName"></h1>
+                    <div id="movieRating"></div>
+                    <div class="row px-md-3 mt-2">
+                        <p id="movieGenre"><i>Genre : </i></p>
+                    </div>
+                    <div class="row px-md-3 mt-1">
+                    <p id="movieLang"><i>Language : </i></p>
+                    </div>
+                    <p id="gist"></p>
+<!--                </div>-->
+                <div class="d-flex flex-column mt-auto">
+                    <div class="row px-md-3 mt-5 mb-2">
+                        <button class="btn btn-sm btn-primary w-40  mx-auto d-block my-4 " id="watchNow" onclick="watchNow()">watch Now</button>
+                        <button class="btn btn-sm btn-primary w-40  mx-auto d-block my-4 " id="watchTrailer">watch Trailer</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container prize mt-4 py-3">
+        <h4 class="text-warning ">Rate it</h4>
+        <div class="star_rating">
+            <div class="star-div" id="parent1"><i class="star star-under fa fa-star" star-data="1"><i class="star star-over fa fa-star"></i>
+            </i><i class="star star-under fa fa-star" star-data="2"><i class="star star-over fa fa-star"></i>
+            </i><i class="star star-under fa fa-star" star-data="3"><i class="star star-over fa fa-star"></i>
+            </i><i class="star star-under fa fa-star" star-data="4"><i class="star star-over fa fa-star"></i>
+            </i><i class="star star-under fa fa-star" star-data="5"><i class="star star-over fa fa-star"></i>
+            </i></div>
+        </div>
+    </div>
+
+    <!-- footer  -->
+    <section class="footer mt-5" id="footer">
+        <div class="container">
+            <div class="social-circle-btn p-2 m-2 d-flex justify-content-center">
+                <div class="btnn instagram">
+                    <i class="fab fa-instagram fa-xs"></i>
+                </div>
+                <div class="btnn facebook">
+                    <i class="fab fa-facebook fa-xs"></i>
+                </div>
+                <div class="btnn twitter">
+                    <i class="fab fa-twitter fa-xs"></i>
+                </div>
+                <div class="btnn whatsapp">
+                    <i class="fab fa-whatsapp fa-xs"></i>
+                </div>
+                <div class="btnn youtube fa-xs">
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+
+        </div>
+        <p class="bg-primary mb-0 py-1 w-100 text-center"> Made by Sunil Rufus</i></p>
+    </section>
+
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+
+    <script src="./js/Constants.js"></script>
+    <script src="js/SpecificMovieLoader.js"></script>
+    <script src="js/iziToast.min.js" type="text/javascript"></script>
+
+
+    <script>
+        let role = checkUser();
+        if(role == 0)
+        {
+            window.location.assign("./index.html");
+        }
+        else
+        {
+            loadCurrentMovie();
+        }
+    </script>
+</body>
+
+
+
+</html>

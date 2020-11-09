@@ -1,0 +1,81 @@
+@import url("headerfooter.css");
+
+#overlay {
+    opacity: 1;
+}
+
+.carousel {
+    background: #2f4357;
+}
+
+.selector {
+    display: none;
+}
+
+@media only screen and (max-width:800px) {
+    .selector {
+        display: block;
+    }
+}
+
+.img-ban {
+    object-fit: cover;
+    width: 500px;
+    max-height: 380px;
+}
+
+@media only screen and (max-width:800px) {
+    .img-ban {
+        height: 240px;
+    }
+}
+
+.progress-gradient {
+    background: #36D1DC;
+    background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);
+    background: linear-gradient(to right, #5B86E5, #36D1DC);
+}
+
+.filter {
+    background-color: var(--main-bg-color);
+
+}
+
+
+
+.card {
+    font-size: medium;
+    background-color: var(--main-bg-color);
+}
+
+.text-small {
+    font-size: smaller;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+.nav-tabs .nav-link.active {
+    color: #f1f1f1;
+    background-color: var(--inner-bg-color);
+    border-color: transparent !important;
+}
+
+.nav-tabs .nav-link {
+    color: gray;
+    background-color: var(--main-bg-color);
+    border: 1px solid #4d4d4d;
+}
+
+.tab-content>.active {
+    display: block;
+    min-height: 165px;
+}
+
+.nav-float-left {
+    float: left;
+    display: block;
+    margin-right: 20px;
+    border-bottom: 0;
+    border-right: 1px solid transparent;
+    padding-right: 15px;
+}
