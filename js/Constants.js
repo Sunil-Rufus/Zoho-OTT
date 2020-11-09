@@ -19,7 +19,7 @@ function checkUser()
 function logout()
 {
     localStorage.removeItem("current_user");
-    window.location.assign("./index.html");
+    window.location.assign("./register.html");
 }
 
 function getMovieFromLocalStorage(msg) {

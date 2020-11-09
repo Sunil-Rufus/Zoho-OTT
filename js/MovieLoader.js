@@ -22,4 +22,4 @@ function loadMoviesInCard(movie)
         parent.appendChild(card);
 
 }
-function navigate(){window.location.href = "./index.html"}
+function navigate(){window.location.href = "./register.html"}
