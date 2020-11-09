@@ -29,7 +29,7 @@ function getMovieFromLocalStorage(msg) {
             message: msg,
             position: "bottomRight"
         })
-        moviesInLocalStorage = JSON.parse("[{\r\n  \"id\":1,\r\n  \"movie\" : \"Anniyan\",\r\n  \"url\" : \"https:\/\/in.bmscdn.com\/iedb\/movies\/images\/mobile\/thumbnail\/large\/anniyan-et00002333-24-03-2017-16-17-18.jpg\",\r\n  \"genre\" : [\"suspense\", \"thriller\"],\r\n  \"rating\" : 4,\r\n  \"language\" :[\"tamil\",\"telugu\"],\r\n  \"date\" : 1604900114\r\n},\r\n{\r\n  \"id\":2,\r\n  \"movie\" : \"IronMan\",\r\n  \"url\" : \"https:\/\/venturebeat.com\/wp-content\/uploads\/2018\/09\/ironman.jpg?w=1200&strip=all\",\r\n  \"genre\" : [\"science-fiction\",\"superhero\",\"action\"],\r\n  \"rating\" : 4,\r\n  \"language\" : [\"tamil\",\"english\"],\r\n  \"date\" : 160492318\r\n}]\r\n")
+        moviesInLocalStorage = JSON.parse("[{\r\n  \"id\":1,\r\n  \"movie\" : \"Anniyan\",\r\n  \"url\" : \"https:\/\/in.bmscdn.com\/iedb\/movies\/images\/mobile\/thumbnail\/large\/anniyan-et00002333-24-03-2017-16-17-18.jpg\",\r\n  \"genre\" : [\"suspense\", \"thriller\"],\r\n  \"rating\" : 4,\r\n  \"language\" :[\"tamil\",\"telugu\"],\r\n  \"date\" : 1604900114,\r\n  \"viewCount\":1\r\n},\r\n{\r\n  \"id\":2,\r\n  \"movie\" : \"IronMan\",\r\n  \"url\" : \"https:\/\/venturebeat.com\/wp-content\/uploads\/2018\/09\/ironman.jpg?w=1200&strip=all\",\r\n  \"genre\" : [\"science-fiction\",\"superhero\",\"action\"],\r\n  \"rating\" : 4,\r\n  \"language\" : [\"tamil\",\"english\"],\r\n  \"date\" : 160492318,\r\n  \"viewCount\":1\r\n}]\r\n)
     }
     return moviesInLocalStorage
 }
