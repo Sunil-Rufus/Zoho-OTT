@@ -35,3 +35,5 @@ Note: Password is still exposed due to local storage
 # Future works:
 - User data model requires slight changes
 - Using movie id can note the movies watched by user and give suggestions on next movies.
+
+Note: The mail was sent to my college mail id, so I saw the mail just two days before the deadline. So I had time constraints due to which I was unable to add new features.
