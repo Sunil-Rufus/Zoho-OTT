@@ -5,7 +5,8 @@
   "genre" : ["suspense", "thriller"],
   "rating" : 4,
   "language" :["tamil","telugu"],
-  "date" : 1604900114
+  "date" : 1604900114,
+  "viewCount":1
 },
 {
   "id":2,
@@ -14,6 +15,7 @@
   "genre" : ["science-fiction","superhero","action"],
   "rating" : 4,
   "language" : ["tamil","english"],
-  "date" : 160492318
+  "date" : 160492318,
+  "viewCount":1
 }]
 
